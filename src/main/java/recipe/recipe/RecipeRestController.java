@@ -33,11 +33,6 @@ public class RecipeRestController {
         return new ResponseEntity<>(service.update(id, request), HttpStatus.OK);
     }
 
-    @GetMapping("/")
-    public ResponseEntity<RecipeDTO> findById(@RequestParam Long id) {
-        return new ResponseEntity<>(service.findById(id), HttpStatus.OK);
-    }
-
     @GetMapping("/all")
     public ResponseEntity<List<RecipeDTO>> findAll() {
         return new ResponseEntity<>(service.findAll(), HttpStatus.OK);
